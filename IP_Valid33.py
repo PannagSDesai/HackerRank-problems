@@ -8,8 +8,13 @@ import re
 
 S="255.120.0.0"
 
-if len(re.findall(r'(\.?\b[0-255]{1,3}\b\.?)',S)) == 4:
-       print("valid")
+def valid_ip(S):
 
-else:
-    print("invalid")
+    if len(re.findall(r'(\.?\b[0-255]{1,3}\b\.?)',S)) == 4:
+           return("valid")
+    
+    else:
+        return("invalid")
+    
+    
+print(valid_ip(S))
